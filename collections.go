@@ -54,6 +54,11 @@ func Contains[T comparable](s []T, v T) bool {
 	return false
 }
 
+func Contains_[T comparable](m map[T]struct{}, v T) bool {
+	_, ok := m[v]
+	return ok
+}
+
 func Removes[T comparable](s []T, v T) []T {
 	var result []T
 	for _, _v := range s {
